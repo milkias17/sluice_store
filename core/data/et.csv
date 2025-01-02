@@ -1,0 +1,60 @@
+city,lat,lng,country,iso2,admin_name,capital,population,population_proper
+Addis Ababa,9.0300,38.7400,Ethiopia,ET,Ādīs Ābeba,primary,3041002,3041002
+Ērer Sātā,9.5667,41.3833,Ethiopia,ET,Sumalē,,649000,649000
+Shashemenē,7.2000,38.6000,Ethiopia,ET,Oromīya,,408368,408368
+K’ebrī Dehar,6.7333,44.2667,Ethiopia,ET,Sumalē,,363000,363000
+Nazrēt,8.5414,39.2689,Ethiopia,ET,Oromīya,,324000,324000
+Mekele,13.4969,39.4769,Ethiopia,ET,Tigray,admin,323700,323700
+Godē,5.9527,43.5516,Ethiopia,ET,Sumalē,,320782,320782
+Āwasa,7.0500,38.4667,Ethiopia,ET,YeDebub Bihēroch Bihēreseboch na Hizboch,admin,300100,300100
+Dire Dawa,9.6000,41.8667,Ethiopia,ET,Dirē Dawa,admin,277000,277000
+Bahir Dar,11.6000,37.3833,Ethiopia,ET,Āmara,admin,243300,243300
+Sodo,6.8550,37.7808,Ethiopia,ET,YeDebub Bihēroch Bihēreseboch na Hizboch,,213467,213467
+Ārba Minch’,6.0333,37.5500,Ethiopia,ET,YeDebub Bihēroch Bihēreseboch na Hizboch,,192043,192043
+Desē,11.1333,39.6333,Ethiopia,ET,Āmara,,187900,187900
+Hosa’ina,7.5500,37.8500,Ethiopia,ET,YeDebub Bihēroch Bihēreseboch na Hizboch,,179761,179761
+K’ebrī Beyah,9.0833,43.0833,Ethiopia,ET,Sumalē,,165518,165518
+Jijiga,9.3500,42.8000,Ethiopia,ET,Sumalē,admin,159300,159300
+Dīla,6.4083,38.3083,Ethiopia,ET,YeDebub Bihēroch Bihēreseboch na Hizboch,,151682,151682
+Nek’emtē,9.0833,36.5500,Ethiopia,ET,Oromīya,,148613,148613
+Debre Birhan,9.6833,39.5333,Ethiopia,ET,Āmara,,139724,139724
+Debre Mark’os,10.3333,37.7167,Ethiopia,ET,Āmara,,133810,133810
+Ferfer,5.0833,45.0833,Ethiopia,ET,Sumalē,,133521,133521
+Āwarē,8.2667,44.1500,Ethiopia,ET,Sumalē,,132149,132149
+Harar,9.3111,42.1278,Ethiopia,ET,Hārerī Hizb,admin,129000,129000
+Kombolcha,11.0867,39.7367,Ethiopia,ET,Āmara,,125654,125654
+Jīma,7.6667,36.8333,Ethiopia,ET,Oromīya,,120960,120960
+Debre Tabor,11.8500,38.0167,Ethiopia,ET,Āmara,,119176,119176
+Harshin,9.2167,43.5878,Ethiopia,ET,Sumalē,,117187,117187
+Ādīgrat,14.2667,39.4500,Ethiopia,ET,Tigray,,116193,116193
+Debre Zeyit,8.7500,38.9833,Ethiopia,ET,Oromīya,,99928,99928
+Gambēla,8.2500,34.5833,Ethiopia,ET,Gambēla Hizboch,admin,97643,97643
+Mīzan Teferī,7.0000,35.5833,Ethiopia,ET,YeDebub Bihēroch Bihēreseboch na Hizboch,,91437,91437
+Ādwa,14.1667,38.9000,Ethiopia,ET,Tigray,,85644,85644
+Gonder,12.6075,37.4592,Ethiopia,ET,Āmara,,80886,80886
+Bodītī,6.8667,37.8667,Ethiopia,ET,YeDebub Bihēroch Bihēreseboch na Hizboch,,67861,67861
+Āsela,7.9500,39.1167,Ethiopia,ET,Oromīya,,67269,67269
+Āksum,14.1208,38.7278,Ethiopia,ET,Tigray,,66800,66800
+Bonga,7.2667,36.2333,Ethiopia,ET,YeDebub M‘irab Ītyop’iya Hizboch,admin,56045,56045
+Finote Selam,10.7000,37.2667,Ethiopia,ET,Āmara,,55567,55567
+Semera,11.7922,41.0086,Ethiopia,ET,Āfar,admin,50000,50000
+Goba,7.0000,39.9833,Ethiopia,ET,Oromīya,,49309,32025
+Hāgere Hiywet,8.9833,37.8500,Ethiopia,ET,Oromīya,,48171,48171
+Robē,7.1167,40.0000,Ethiopia,ET,Oromīya,,44382,44382
+Yirga ‘Alem,6.7500,38.4167,Ethiopia,ET,YeDebub Bihēroch Bihēreseboch na Hizboch,,43815,43815
+Giyon,8.5333,37.9667,Ethiopia,ET,Oromīya,,37878,37878
+Bedēsa,6.8830,37.9329,Ethiopia,ET,YeDebub Bihēroch Bihēreseboch na Hizboch,,35294,35294
+Āzezo,12.5586,37.4308,Ethiopia,ET,Āmara,,33719,33719
+Butajīra,8.1208,38.3792,Ethiopia,ET,YeDebub Bihēroch Bihēreseboch na Hizboch,,33406,33406
+Ālamat’ā,12.4167,39.5500,Ethiopia,ET,Tigray,,33214,33214
+Āreka,7.0710,37.7076,Ethiopia,ET,YeDebub Bihēroch Bihēreseboch na Hizboch,,31408,31408
+Gīmbī,9.1667,35.8333,Ethiopia,ET,Oromīya,,30981,30981
+Wik’ro,13.7833,39.6000,Ethiopia,ET,Tigray,,30210,30210
+Welk’īt’ē,8.2833,37.7833,Ethiopia,ET,YeDebub Bihēroch Bihēreseboch na Hizboch,,28866,28866
+Metu,8.3000,35.5833,Ethiopia,ET,Oromīya,,28782,28782
+Fichē,9.8000,38.7333,Ethiopia,ET,Oromīya,,27493,27493
+K’olīto,7.3122,38.0892,Ethiopia,ET,YeDebub Bihēroch Bihēreseboch na Hizboch,,27359,27359
+Genet,9.0500,38.5000,Ethiopia,ET,Oromīya,,25593,25593
+Āgaro,7.8558,36.5858,Ethiopia,ET,Oromīya,,25458,25458
+Gelemso,8.8167,40.5167,Ethiopia,ET,Oromīya,,24200,24200
+Āsosa,10.0667,34.5167,Ethiopia,ET,Bīnshangul Gumuz,admin,20226,20226

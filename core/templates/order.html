@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% load static %}
+{% load tailwind_filters %}
+{% block content %}
+    {% comment %}
+      <div class="text-center text-3xl font-extrabold">Solar Powered Sluice Box</div>
+      <div class="flex justify-around items-center p-8 mt-8">
+        <img class="max-w-full max-h-full" src="{% static "images/sluice.jpg" %}" alt="Solar Panel" class="w-1/2">
+        <h4 class="text-4xl font-extrabold">
+          "Maximizing efficiency, minimizing impact."
+        </h4>
+      </div>
+    {% endcomment %}
+    {{ form|crispy }}
+{% endblock content %}

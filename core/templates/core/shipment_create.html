@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% load static %}
+{% load tailwind_filters %}
+{% block content %}
+    {% comment %}
+      <div class="text-center text-3xl font-extrabold">Solar Powered Sluice Box</div>
+      <div class="flex justify-around items-center p-8 mt-8">
+        <img class="max-w-full max-h-full" src="{% static "images/sluice.jpg" %}" alt="Solar Panel" class="w-1/2">
+        <h4 class="text-4xl font-extrabold">
+          "Maximizing efficiency, minimizing impact."
+        </h4>
+      </div>
+    {% endcomment %}
+    <div class="hero bg-base-200 min-h-screen"
+      style="background-image: url({% static "images/order-bg.jpg" %});"
+      >
+        <div class="hero-content flex-col lg:flex-row-reverse">
+            <div class="text-center lg:text-left">
+                <h1 class="text-5xl font-bold text-yellow-400">Get Your Order's Now! With Shipping!</h1>
+                <p class="py-6 text-white">
+                    Order your high-quality, solar-powered sluice boxes today and start maximizing your gold mining efficiency! Our easy-to-use sluice boxes come with fast, reliable shipping, ensuring you can get started as soon as possible. Don’t wait—take your mining operations to the next level!
+                </p>
+            </div>
+            <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                <form method="post" class="card-body">
+                    {% csrf_token %}
+                    {{ form }}
+                    <button class="btn btn-primary">Make Order</button>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock content %}

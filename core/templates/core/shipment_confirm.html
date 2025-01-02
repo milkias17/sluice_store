@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="container mx-auto p-4">
+        <h2 class="text-2xl font-bold text-center">Confirm Your Shipment</h2>
+        <div class="card bg-white shadow-xl mt-8">
+            <form method="post" class="card-body">
+                {% csrf_token %}
+                <h2 class="card-title text-2xl font-bold">Shipment Detail</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+                    <div>
+                        <h3 class="text-lg font-semibold">Tracking Number</h3>
+                        <p>{{ shipment.id }}</p>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold">Origin</h3>
+                        <p>Addis Ababa</p>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold">Destination</h3>
+                        <p>{{ shipment.shipment_address }}</p>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold">Estimated Delivery</h3>
+                        <p>{{ shipment.estimated_delivery_date }}</p>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold">Material Cost</h3>
+                        <p>{{ shipment.material_cost }}</p>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold">Shipment Cost</h3>
+                        <p>{{ shipment.shipment_cost }}</p>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold">Count of shipments</h3>
+                        <p>{{ shipment.item_count }}</p>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold">Total Cost</h3>
+                        <p>{{ shipment.total_cost }}</p>
+                    </div>
+                </div>
+                <div class="card-actions justify-end mt-4">
+                    <button class="btn btn-primary">Confirm Buy</button>
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock content %}

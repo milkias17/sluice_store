@@ -1,0 +1,278 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+    <div class="container mx-auto p-6">
+        <h1 class="text-4xl font-bold text-center mb-4 lg:mb-8">About Us</h1>
+        <div class="lg:flex lg:justify-between lg:gap-8">
+            <img src="{% static "images/stock-about-us.jpg" %}"
+                 alt="About Us"
+                 class="rounded-lg shadow-lg">
+            <div class="flex flex-col justify-center items-center">
+                <h3 class="font-extrabold text-lg">Meet the Team Behind the Innovation</h3>
+                <p>
+                    We are a group of passionate and driven engineering students committed to developing sustainable solutions for real-world challenges. Together, we bring diverse skills and expertise to create the Solar-Powered Sluice Box, a project that aligns with our shared vision of innovation and environmental stewardship.
+                </p>
+            </div>
+        </div>
+        <div class="p-6 rounded-lg shadow-lg mt-40">
+            <h2 class="text-2xl font-semibold mb-4">Our Team</h2>
+            <div class="overflow-x-auto">
+                <table class="table w-full">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>ID</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Delina Mulubrhan</td>
+                            <td>ETS0484/14</td>
+                        </tr>
+                        <tr>
+                            <td>Milkias Yeheyis</td>
+                            <td>ETS1101/14</td>
+                        </tr>
+                        <tr>
+                            <td>Abriham Walelign</td>
+                            <td>ETS0109/14</td>
+                        </tr>
+                        <tr>
+                            <td>Yididiya Gedeyelw</td>
+                            <td>ETS1678/14</td>
+                        </tr>
+                        <tr>
+                            <td>Girum Sisay</td>
+                            <td>ETS0700/14</td>
+                        </tr>
+                        <tr>
+                            <td>Bereket Hailu</td>
+                            <td>ETS0293/14</td>
+                        </tr>
+                        <tr>
+                            <td>Zekeriyas Molla</td>
+                            <td>ETS1790/14</td>
+                        </tr>
+                        <tr>
+                            <td>Kalid Anwar</td>
+                            <td>ETS0882/14</td>
+                        </tr>
+                        <tr>
+                            <td>Feven Lemma</td>
+                            <td>ETS0500/13</td>
+                        </tr>
+                        <tr>
+                            <td>Abel Ayalew</td>
+                            <td>ETS0043/14</td>
+                        </tr>
+                        <tr>
+                            <td>Helen Fikiru</td>
+                            <td>ETS0762/14</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        {# <div class="hero bg-base-200 min-h-screen"> #}
+        {#     <div class="hero-content flex-col lg:flex-row-reverse"> #}
+        {#         <img src="{% static "images/original-prototype.jpg" %}" #}
+        {#              class="max-w-lg rounded-lg shadow-2xl" /> #}
+        {#         <div> #}
+        {#             <h1 class="text-5xl font-bold">Our Journey</h1> #}
+        {#             <p class="py-6"> #}
+        {#                 Our journey began as a school project where we built a solar-powered sluice box. This innovative project was a collaborative effort by our dedicated team members. The success of our prototype inspired us to take it further and offer this eco-friendly solution to a wider audience. #}
+        {#             </p> #}
+        {#         </div> #}
+        {#     </div> #}
+        {# </div> #}
+        <section id="journey" class="py-12 bg-gray-200">
+            <div class="container mx-auto px-6">
+                <h3 class="text-3xl font-bold text-center mb-8">Our Journey</h3>
+                <ul class="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical">
+                    <li>
+                        <div class="timeline-middle">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                 viewBox="0 0 20 20"
+                                 fill="currentColor"
+                                 class="h-5 w-5">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
+                            </svg>
+                        </div>
+                        <div class="timeline-start mb-10 md:text-end">
+                            <time class="font-mono italic">Week 1</time>
+                            <div class="text-lg font-black">Orientation and Workshop Visit</div>
+                            In the first week of the project, we laid a strong foundation by participating in an orientation session for the Integrated Engineering Training Program (IETP), gaining clarity on objectives and expectations. We toured the mechanical workshop, learned safety protocols, and familiarized ourselves with essential equipment. A productive advisor meeting helped us outline project goals and next steps, while the creation of a Telegram group facilitated communication and collaboration. These initial activities were crucial in aligning the team and preparing for the weeks ahead.
+                        </div>
+                        <hr />
+                    </li>
+                    <li>
+                        <hr />
+                        <div class="timeline-middle">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                 viewBox="0 0 20 20"
+                                 fill="currentColor"
+                                 class="h-5 w-5">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
+                            </svg>
+                        </div>
+                        <div class="timeline-end md:mb-10">
+                            <time class="font-mono italic">Week 2</time>
+                            <div class="text-lg font-black">Project Idea Brainstorming and Selection</div>
+                            In the second week, we focused on refining our project concept by reviewing the IETP guidelines to align with its framework and expectations. Through group brainstorming and discussions with our advisor, we evaluated various ideas, ultimately selecting the solar-powered sluice box project. We finalized and submitted our initial project proposal for feedback, solidifying our direction and gaining clarity for the next steps.
+                        </div>
+                        <hr />
+                    </li>
+                    <li>
+                        <hr />
+                        <div class="timeline-middle">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                 viewBox="0 0 20 20"
+                                 fill="currentColor"
+                                 class="h-5 w-5">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
+                            </svg>
+                        </div>
+                        <div class="timeline-start mb-10 md:text-end">
+                            <time class="font-mono italic">Week 3</time>
+                            <div class="text-lg font-black">Project Proposal Development</div>
+                            In Week 3, we finalized the solar-powered sluice box project concept and began drafting the proposal, detailing its scope, objectives, methodology, and expected impact. After submitting the draft to our advisor, we incorporated feedback to refine the document. With the finalized proposal approved, we confirmed the project's direction and established goals for the next phase, solidifying the foundation for our work ahead.
+                        </div>
+                        <hr />
+                    </li>
+                    <li>
+                        <hr />
+                        <div class="timeline-middle">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                 viewBox="0 0 20 20"
+                                 fill="currentColor"
+                                 class="h-5 w-5">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
+                            </svg>
+                        </div>
+                        <div class="timeline-end md:mb-10">
+                            <time class="font-mono italic">Week 4</time>
+                            <div class="text-lg font-black">Design Finalization and Procurement Planning</div>
+                            In Week 4, we advanced the project by finalizing the design and planning the procurement process. We discussed the system's layout, dimensions, and technical specifications, developed CAD drawings for the solar-powered sluice box, and created a procurement plan for materials and suppliers. A workshop visit allowed us to review available tools and equipment, ensuring readiness for the fabrication phase. This week was pivotal in preparing for the project's next steps.
+                        </div>
+                        <hr />
+                    </li>
+                    <li>
+                        <hr />
+                        <div class="timeline-middle">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                 viewBox="0 0 20 20"
+                                 fill="currentColor"
+                                 class="h-5 w-5">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
+                            </svg>
+                        </div>
+                        <div class="timeline-start mb-10 md:text-end">
+                            <time class="font-mono italic">Week 5</time>
+                            <div class="text-lg font-black">Material Procurement and Assembly Preparation</div>
+                            In Week 5, we focused on procuring materials and preparing for the construction phase of the solar-powered sluice box project. This included purchasing essential components like solar panels and pumps, organizing and sorting the materials, and revisiting the mechanical workshop for assembly. We also finalized the design details to ensure everything would fit together according to plan, setting the stage for the upcoming work and testing.
+                        </div>
+                    </li>
+                    <li>
+                        <hr />
+                        <div class="timeline-middle">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                 viewBox="0 0 20 20"
+                                 fill="currentColor"
+                                 class="h-5 w-5">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
+                            </svg>
+                        </div>
+                        <div class="timeline-end md:mb-10">
+                            <time class="font-mono italic">Week 6</time>
+                            <div class="text-lg font-black">Design Finalization and Procurement Planning</div>
+                            In Week 6, we focused on planning and preparing for the construction phase of the solar-powered sluice box project. We created a detailed blueprint for integrating the solar panels, pumps, and sluice box components, and conducted preliminary tests on individual parts to ensure their functionality. Safety protocols were reassessed, and team members were trained on proper handling procedures. Additionally, we developed a step-by-step assembly plan, laying the foundation for efficient construction and testing in the weeks ahead.
+                        </div>
+                        <hr />
+                    </li>
+                    <li>
+                        <hr />
+                        <div class="timeline-middle">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                 viewBox="0 0 20 20"
+                                 fill="currentColor"
+                                 class="h-5 w-5">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
+                            </svg>
+                        </div>
+                        <div class="timeline-start mb-10 md:text-end">
+                            <time class="font-mono italic">Week 7</time>
+                            <div class="text-lg font-black">Final Preparations and Trial Runs</div>
+                            In Week 7, we conducted trial runs and finalized preparations for a smooth transition into the construction phase of the solar-powered sluice box project. We performed a mock assembly of non-critical components to check part compatibility and identify issues, ran calibration trials on key systems like the solar setup, and refined the design based on insights from these tests. Additionally, we allocated roles and responsibilities within the team to ensure clarity and coordination moving forward. This week was crucial in ensuring we were ready to confidently begin construction in Week 8.
+                        </div>
+                    </li>
+                    <li>
+                        <hr />
+                        <div class="timeline-middle">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                 viewBox="0 0 20 20"
+                                 fill="currentColor"
+                                 class="h-5 w-5">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
+                            </svg>
+                        </div>
+                        <div class="timeline-end md:mb-10">
+                            <time class="font-mono italic">Week 8</time>
+                            <div class="text-lg font-black">Construction Phase Begins</div>
+                            In Week 8, the team officially began the construction of the solar-powered sluice box. We started assembling the physical structure, including the frame, channels, and other foundational elements. Initial work on integrating the solar panels and electrical components to power the system also commenced. Regular team discussions ensured everyone understood the assembly steps and division of tasks. This week marked the beginning of the hands-on effort to bring the project to life.
+                        </div>
+                        <hr />
+                    </li>
+                    <li>
+                        <hr />
+                        <div class="timeline-middle">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                 viewBox="0 0 20 20"
+                                 fill="currentColor"
+                                 class="h-5 w-5">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
+                            </svg>
+                        </div>
+                        <div class="timeline-start mb-10 md:text-end">
+                            <time class="font-mono italic">Week 9</time>
+                            <div class="text-lg font-black">System Assembly and Testing</div>
+                            In Week 8, we advanced the construction of the solar-powered sluice box and initiated preliminary testing. The team began assembling the physical structure, including the frame and channels, and started integrating the solar panels and electrical components. The water pumping system was successfully incorporated into the design, and mechanical refinements were made to ensure proper water flow and gold capture. Regular team discussions helped coordinate tasks and ensure understanding of the assembly process. Additionally, we began setting up a controlled environment for testing the efficiency of the integrated components, emphasizing progress and identifying areas for improvement.
+                        </div>
+                    </li>
+                    <li>
+                        <hr />
+                        <div class="timeline-middle">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                 viewBox="0 0 20 20"
+                                 fill="currentColor"
+                                 class="h-5 w-5">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
+                            </svg>
+                        </div>
+                        <div class="timeline-end md:mb-10">
+                            <time class="font-mono italic">Week 10</time>
+                            <div class="text-lg font-black">Advanced Integration and Design Refinements</div>
+                            In Week 11, we focused on completing the solar-powered sluice box project and preparing all final deliverables. The project website was finalized to showcase our progress, reflections, and achievements. The e-portfolio was reviewed and completed, emphasizing the engineering principles and project journey. A project poster and video were created to summarize the objectives, process, and outcomes. Additionally, the construction of the sluice box was finished, with all components functioning seamlessly. This week brought together all aspects of the project, ensuring readiness for the final demonstration and evaluations.
+                        </div>
+                        <hr />
+                    </li>
+                    <li>
+                        <hr />
+                        <div class="timeline-middle">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                 viewBox="0 0 20 20"
+                                 fill="currentColor"
+                                 class="h-5 w-5">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
+                            </svg>
+                        </div>
+                        <div class="timeline-start mb-10 md:text-end">
+                            <time class="font-mono italic">Week 11</time>
+                            <div class="text-lg font-black">Project Completion and Final Deliverables</div>
+                            In the final week, we concluded all aspects of the project. The construction of the solar-powered sluice box was completed and tested successfully. We finalized and polished the website. The e-portfolio was prepared and reviewed, summarizing our engineering principles, reflections, and documentation. Additionally, we created and finalized the project poster and video presentation, encapsulating the project’s objectives, process, and results. This week marked the culmination of all our efforts, preparing us for the final demonstration and evaluations
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </div>
+{% endblock content %}

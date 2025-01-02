@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="container mx-auto p-4">
+        <h1 class="text-2xl font-bold mb-4">Your Shipments</h1>
+        <div class="overflow-x-auto">
+            <table class="table w-full">
+                <thead>
+                    <tr>
+                        <th>Tracking Number</th>
+                        <th>Status</th>
+                        <th>Estimated Delivery</th>
+                        <th>Actual Delivery</th>
+                        <th>Address</th>
+                        <th>Cost</th>
+                        <th>Items</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for shipment in shipments %}
+                        <tr>
+                            <td>{{ shipment.id }}</td>
+                            <td>
+                                {% if shipment.shipment_status == "Pending" %}
+                                    <a class="link link-warning" href="{% url 'confirm_order' pk=shipment.id %}">{{ shipment.get_shipment_status_display }}</a>
+                                {% else %}
+                                    {{ shipment.get_shipment_status_display }}
+                                {% endif %}
+                            </td>
+                            <td>{{ shipment.estimated_delivery_date }}</td>
+                            {% if shipment.actual_delivery_date == None %}
+                                {% if shipment.shipment_status == "Pending" %}
+                                    <td>Awaiting Payment</td>
+                                {% else %}
+                                    <td>Not Delivered Yet</td>
+                                {% endif %}
+                            {% else %}
+                                <td>{{ shipment.actual_delivery_date }}</td>
+                            {% endif %}
+                            <td>{{ shipment.shipment_address }}</td>
+                            <td>{{ shipment.shipment_cost }}</td>
+                            <td>{{ shipment.item_count }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+{% endblock content %}
