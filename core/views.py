@@ -117,7 +117,7 @@ def handle_successful_payment(request: HttpRequest):
     if request.method != "POST":
         return HttpResponse("Method not allowed", status=405)
 
-    body = request.body
+    body = request.body.decode("utf-8")
     print("Body: ", body)
     data = json.loads(body)
     print("Data: ", data)
@@ -127,7 +127,7 @@ def handle_successful_payment(request: HttpRequest):
         chapa_signature=request.headers.get("Chapa-Signature"),
     ):
         return HttpResponse("Invalid signature", status=400)
-    if data["event"] != "charge.success" or data["event"] != "payout.success":
+    if data["event"] != "charge.success" and data["event"] != "payout.success":
         return HttpResponse("Invalid event", status=400)
 
     transaction_id = data["tx_ref"]
