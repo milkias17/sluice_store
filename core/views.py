@@ -6,6 +6,8 @@ from django.http import HttpRequest, HttpResponse, HttpResponseRedirect
 from django.shortcuts import redirect, render
 from django.urls import reverse_lazy
 from django.utils import timezone
+from django.utils.decorators import method_decorator
+from django.views.decorators.csrf import csrf_exempt
 from django.views.generic import CreateView, DetailView, ListView
 from core.forms import ShipmentForm
 from core.models import Shipment, ShipmentStatus, Transaction, TransactionStatus
@@ -110,16 +112,21 @@ class AdminPendingShipmentListView(LoginRequiredMixin, GroupRequiredMixin, ListV
         return redirect(reverse_lazy("admin_list_pending_orders"))
 
 
+@csrf_exempt
 def handle_successful_payment(request: HttpRequest):
+    if request.method != "POST":
+        return HttpResponse("Method not allowed", status=405)
+
+    body = request.body
+    print("Body: ", body)
+    data = json.loads(body)
+    print("Data: ", data)
     if not verify_webhook(
         secret_key=config.get("WEBHOOK_SECRET_KEY"),
-        body=request.body,
+        body=body,
         chapa_signature=request.headers.get("Chapa-Signature"),
     ):
         return HttpResponse("Invalid signature", status=400)
-    body = request.body
-    print(body)
-    data = json.loads(body)
     if data["event"] != "charge.success" or data["event"] != "payout.success":
         return HttpResponse("Invalid event", status=400)
 
