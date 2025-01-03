@@ -133,10 +133,11 @@ def handle_successful_payment(request: HttpRequest):
     transaction_id = data["tx_ref"]
     transaction = Transaction.objects.get(id=transaction_id)
     transaction.status = TransactionStatus.SUCCESS
-    shipment = transaction.shipment
-    shipment.status = ShipmentStatus.IN_PROGRESS
-    shipment.save()
     transaction.save()
+
+    shipment = transaction.shipment
+    shipment.shipment_status = ShipmentStatus.IN_PROGRESS
+    shipment.save()
     return HttpResponse("Success", status=200)
 
 
