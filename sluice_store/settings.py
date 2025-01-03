@@ -43,11 +43,13 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "crispy_forms",
     "crispy_tailwind",
-    "django_browser_reload",
     "tailwind",
     "theme",
     "core",
 ]
+
+if DEBUG:
+    INSTALLED_APPS.append("django_browser_reload")
 
 CRISPY_ALLOWED_TEMPLATE_PACKS = "tailwind"
 
