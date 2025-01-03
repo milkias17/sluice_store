@@ -19,6 +19,7 @@
                         <th>Address</th>
                         <th>Cost</th>
                         <th>Items</th>
+                        <th>Receipt</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -46,6 +47,10 @@
                             <td>{{ shipment.shipment_address }}</td>
                             <td>{{ shipment.shipment_cost }}</td>
                             <td>{{ shipment.item_count }}</td>
+                            <td>
+                                <a class="link link-primary"
+                                   href="{{ shipment.transaction.checkout_url }}">View</a>
+                            </td>
                         </tr>
                     {% endfor %}
                 </tbody>

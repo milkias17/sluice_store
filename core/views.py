@@ -15,9 +15,22 @@ from dotenv import dotenv_values
 config = dotenv_values()
 
 
+class NotAdminMixin(UserPassesTestMixin):
+    group_name = None
+
+    def test_func(self):
+        return not self.request.user.groups.filter(name=self.group_name).exists()
+
+    def handle_no_permission(self):
+        messages.error(self.request, "You are not authorized to access this page")
+        referrer = self.request.META.get("HTTP_REFERER")
+        if referrer:
+            return redirect(referrer)
+        return redirect("index")
+
+
 # Create your views here.
 def index(request):
-    print(reverse_lazy("admin_list_delivered_orders"))
     return render(request, "home.html")
 
 
@@ -25,8 +38,9 @@ def order(request):
     return render(request, "order.html")
 
 
-class ShipmentCreateView(LoginRequiredMixin, CreateView):
+class ShipmentCreateView(LoginRequiredMixin, NotAdminMixin, CreateView):
     model = Shipment
+    group_name = "admin"
     form_class = ShipmentForm
     template_name_suffix = "_create"
 
