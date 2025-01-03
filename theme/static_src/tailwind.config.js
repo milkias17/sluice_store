@@ -52,7 +52,6 @@ module.exports = {
 		 * for forms. If you don't like it or have own styling for forms,
 		 * comment the line below to disable '@tailwindcss/forms'.
 		 */
-		require("@tailwindcss/forms"),
 		require("@tailwindcss/typography"),
 		require("@tailwindcss/aspect-ratio"),
 		require("daisyui"),
