@@ -1,4 +1,5 @@
 {% load static tailwind_tags %}
+{% load auth_extras %}
 <!DOCTYPE html>
 <html lang="en" data-theme="cupcake" style="weight: 100%; height: 100%;">
     <head>
@@ -53,10 +54,17 @@
                 <a href="{% url 'index' %}" class="btn btn-ghost text-xl">Sluice Store</a>
             </div>
             <div class="flex-none gap-4">
-                <a class="link link-accent" href="{% url 'about_us' %}">About Us</a>
-                {% if request.user.is_authenticated %}
-                    <a class="link link-primary" href="{% url 'list_orders' %}">My Orders</a>
+                {% if request.user|has_group:"admin" %}
+                    <a class="link link-primary"
+                       href="{% url 'admin_list_delivered_orders' %}">Delivered Orders</a>
+                    <a class="link link-error"
+                       href="{% url 'admin_list_pending_orders' %}">Pending Orders</a>
+                {% else %}
+                    {% if request.user.is_authenticated %}
+                        <a class="link link-primary" href="{% url 'list_orders' %}">My Orders</a>
+                    {% endif %}
                 {% endif %}
+                <a class="link link-accent" href="{% url 'about_us' %}">About Us</a>
                 {% if not request.user.is_authenticated %}
                     <a href="{% url 'login' %}" class="btn btn-secondary">Login</a>
                 {% else %}
@@ -69,11 +77,11 @@
         </div>
         <div class="toast fade-in-fade-out">
             {% if messages %}
-              {% for message in messages %}
-                  <div class="alert alert-{{ message.tags }} mb-4">
-                      <span>{{ message }}</span>
-                  </div>
-              {% endfor %}
+                {% for message in messages %}
+                    <div class="alert alert-{{ message.tags }} mb-4">
+                        <span>{{ message }}</span>
+                    </div>
+                {% endfor %}
             {% endif %}
         </div>
         {% block content %}

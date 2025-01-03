@@ -1,9 +1,12 @@
 from django.db import models
+from dotenv import dotenv_values
 from core.utils import generate_tracking_number, get_cities
 from django.urls import reverse_lazy
 from core.transactions import chapa
 from django.contrib.auth.models import User
 import uuid
+
+config = dotenv_values()
 
 
 class BaseModel(models.Model):
@@ -56,8 +59,8 @@ class Transaction(BaseModel):
             last_name=user.last_name,
             tx_ref=transaction.id,
             customization={"title": "SluiceStore"},
-            return_url="http://localhost:8000" + reverse_lazy("index"),
-            callback_url="http://localhost:8000" + reverse_lazy("transaction_success"),
+            return_url=config.get("BASE_URL") + reverse_lazy("list_orders"),
+            callback_url=config.get("BASE_URL") + reverse_lazy("transaction_success"),
         )
         if response["status"] == "failed":
             transaction.status = TransactionStatus.FAILED
@@ -72,13 +75,12 @@ class Transaction(BaseModel):
 class ShipmentStatus(models.TextChoices):
     PENDING = "Pending"
     IN_PROGRESS = "In Progress"
-    SHIPPED = "Shipped"
     DELIVERED = "Delivered"
 
 
 class Shipment(BaseModel):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-    transaction = models.ForeignKey(
+    transaction = models.OneToOneField(
         Transaction, on_delete=models.CASCADE, null=True, blank=True
     )
     shipment_status = models.CharField(
